@@ -1,0 +1,54 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    background: url("./pikachubg1.png");
+    background-size: cover;
+    background-repeat: no repeat;
+    background-position: center;
+}
+
+#board{
+    width: 480px;
+    height: 480px;
+    background-color: orange;
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid white;
+    border-radius: 25px;
+}
+
+#board div{
+    /*board = 480x480, divide into 3x3 --> 160x160 per div*/
+    width: 160px;
+    height: 160px;
+    background-image: url("./pokeball.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#board div img{
+    /*all img inside div - to make the more smaller */
+    width: 120px;
+    height: 120px;
+    margin-top: -120px;
+    object-fit: cover; 
+    object-position: center;
+}
+    
+#board div img.dugtrio {
+    width: 100px; 
+    height: 95px; 
+}
+#board div img {
+    /* all img tags inside the tile div tags - to avoid drag and blue select */
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
